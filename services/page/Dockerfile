@@ -8,5 +8,4 @@ RUN npm install && npm run build
 
 FROM nginx:1.17.8-alpine
 COPY ./nginx/conf.d /etc/nginx/conf.d
-# COPY ./index.html /usr/share/page/html/index.html
 COPY --from=build-env /opt/app/public /usr/share/page/html/
