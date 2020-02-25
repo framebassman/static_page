@@ -1,0 +1,9 @@
+version: '3.6'
+
+services:
+  page:
+    container_name: page
+    build:
+      context: ./services/page
+    ports:
+      - 80:80
